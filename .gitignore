@@ -1,3 +1,5 @@
 .vscode/
 Notepad.c
 *.exe
+LAB/*.exe
+HW/*.exe
