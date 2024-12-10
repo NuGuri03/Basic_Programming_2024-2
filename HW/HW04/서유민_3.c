@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node *nodeptr;
-typedef struct node {
+typedef struct stack *nodeptr;
+typedef struct stack {
     char arr[20];
     nodeptr next;
-}node;
+}stack;
 
-void link(node **first_node, node **last_node) {
-    node *new_node = (node*)malloc(sizeof(node));
+void link(stack **first_node, stack **last_node) {
+    stack *new_node = (stack*)malloc(sizeof(stack));
     scanf("%s", new_node->arr);
     new_node->next = NULL;
 
@@ -23,7 +23,7 @@ void link(node **first_node, node **last_node) {
 }
 
 int main() {
-    node *first_node = NULL, *last_node = NULL;
+    stack *first_node = NULL, *last_node = NULL;
     nodeptr head;
     printf("문자열 5라인 입력하시오. :\n");
     for (int i = 0; i < 5; i++) {

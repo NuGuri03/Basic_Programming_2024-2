@@ -2,13 +2,13 @@
 
 void sol(int n, int from, int aux, int to) {
     if (n == 1) { 
-        printf("마지막 : %d -> %d\n", from, to);
+        printf("%d -> %d\n", from, to);
         return;
     }
-    
+
     sol(n - 1, from, to, aux);
 
-    printf("중간 : %d -> %d\n", from , to);
+    printf("%d -> %d\n", from , to);
 
     sol(n - 1, aux , from, to);
 

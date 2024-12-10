@@ -7,15 +7,19 @@ char change(char ch) {
     else if ('a' <= ch && ch <= 'z') {
         ch = (ch + 3 <= 'z') ? ch + 3 : ch + 3 - 26;
     }
+    else if ('0' <= ch && ch <= '9') {
+        ch = (ch + 3 <= '9') ? ch + 3 : ch + 3 - 10;
+    }
     return ch;
 }
 
 int main() {
     char str[100];
-    while(gets_s(str, 100) != NULL) {
+    while(gets_s(str, 100) != "\n") {
         for (int i = 0; str[i] != '\0'; i++) {
             printf("%c", change(str[i]));
         }
+        printf("\n");
 
         if (str[0] == '\0') break;
     }
